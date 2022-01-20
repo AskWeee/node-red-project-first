@@ -1003,6 +1003,51 @@
         "wires": []
     },
     {
+        "id": "9a54bf770981eb0f",
+        "type": "debug",
+        "z": "018c43299b296318",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "bf2de7af2d73eeca",
+        "type": "inject",
+        "z": "018c43299b296318",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 840,
+        "y": 580,
+        "wires": [
+            [
+                "9a54bf770981eb0f"
+            ]
+        ]
+    },
+    {
         "id": "9d21c4c62f7843e7",
         "type": "mysql",
         "z": "61fb8cd462613a38",

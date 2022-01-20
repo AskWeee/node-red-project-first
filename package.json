@@ -2,7 +2,12 @@
     "name": "nr_project_first",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-kingworld": "1.0.0",
+        "node-red-contrib-yis-data-object-editor": "1.0.0",
+        "node-red-node-mysql": "1.0.0",
+        "node-red-node-wordpos": "0.0.4"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
