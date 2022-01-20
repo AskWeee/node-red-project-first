@@ -1,0 +1,2865 @@
+[
+    {
+        "id": "018c43299b296318",
+        "type": "tab",
+        "label": "流程 main",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "61fb8cd462613a38",
+        "type": "tab",
+        "label": "KingWorld",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "460d1e5d310b092e",
+        "type": "tab",
+        "label": "流程 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "56b08a446504d824",
+        "type": "tab",
+        "label": "流程 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ebf440d3c5f2d319",
+        "type": "tab",
+        "label": "流程 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9e9e641d2adb78ee",
+        "type": "tab",
+        "label": "流程 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1e40fc1207db66c8",
+        "type": "tab",
+        "label": "流程 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9575380d132f6e77",
+        "type": "tab",
+        "label": "流程 5",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fa93550718b3cad8",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "d5c2cf28b3efedc6"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 960,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "eaa941a2bee26035",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "32db1e33cc6fca47",
+        "type": "subflow",
+        "name": "Subflow 2",
+        "info": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "ddad8a7cc628c4bc"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1180,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "a784170b1e8999ac",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "71ba84bafeb49f62",
+        "type": "MySQLdatabase",
+        "name": "olcdb",
+        "host": "10.12.2.104",
+        "port": "3306",
+        "db": "olcdb",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "6d848ad2e5e00efb",
+        "type": "function",
+        "z": "fa93550718b3cad8",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 8,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "a018cf33b466687c"
+            ],
+            [
+                "44aece9a1d45978b"
+            ],
+            [
+                "abc0b3dee06b803c"
+            ],
+            [
+                "256675d8e5f7d59f"
+            ],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a018cf33b466687c",
+        "type": "template",
+        "z": "fa93550718b3cad8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 610,
+        "y": 220,
+        "wires": [
+            [
+                "eaa941a2bee26035"
+            ]
+        ]
+    },
+    {
+        "id": "44aece9a1d45978b",
+        "type": "template",
+        "z": "fa93550718b3cad8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 610,
+        "y": 260,
+        "wires": [
+            [
+                "eaa941a2bee26035"
+            ]
+        ]
+    },
+    {
+        "id": "abc0b3dee06b803c",
+        "type": "template",
+        "z": "fa93550718b3cad8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 610,
+        "y": 300,
+        "wires": [
+            [
+                "eaa941a2bee26035"
+            ]
+        ]
+    },
+    {
+        "id": "eaa941a2bee26035",
+        "type": "function",
+        "z": "fa93550718b3cad8",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa9fb29093d62963",
+        "type": "function",
+        "z": "fa93550718b3cad8",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 8,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 380,
+        "wires": [
+            [
+                "a018cf33b466687c"
+            ],
+            [
+                "44aece9a1d45978b"
+            ],
+            [
+                "abc0b3dee06b803c"
+            ],
+            [
+                "66e8c1833bba20da"
+            ],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "256675d8e5f7d59f",
+        "type": "template",
+        "z": "fa93550718b3cad8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 610,
+        "y": 340,
+        "wires": [
+            [
+                "eaa941a2bee26035"
+            ]
+        ]
+    },
+    {
+        "id": "66e8c1833bba20da",
+        "type": "template",
+        "z": "fa93550718b3cad8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 610,
+        "y": 380,
+        "wires": [
+            [
+                "eaa941a2bee26035"
+            ]
+        ]
+    },
+    {
+        "id": "d5c2cf28b3efedc6",
+        "type": "template",
+        "z": "fa93550718b3cad8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [
+                "6d848ad2e5e00efb",
+                "fa9fb29093d62963"
+            ]
+        ]
+    },
+    {
+        "id": "061d776449250cd4",
+        "type": "function",
+        "z": "32db1e33cc6fca47",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 8,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 160,
+        "wires": [
+            [
+                "ab2348349b502ea2"
+            ],
+            [
+                "7ab8e267d6e15ed3"
+            ],
+            [
+                "2b8819dcbfc89fea"
+            ],
+            [
+                "951a8fdef08fa58a"
+            ],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ab2348349b502ea2",
+        "type": "template",
+        "z": "32db1e33cc6fca47",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 710,
+        "y": 180,
+        "wires": [
+            [
+                "a784170b1e8999ac"
+            ]
+        ]
+    },
+    {
+        "id": "7ab8e267d6e15ed3",
+        "type": "template",
+        "z": "32db1e33cc6fca47",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 710,
+        "y": 220,
+        "wires": [
+            [
+                "a784170b1e8999ac"
+            ]
+        ]
+    },
+    {
+        "id": "2b8819dcbfc89fea",
+        "type": "template",
+        "z": "32db1e33cc6fca47",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 710,
+        "y": 260,
+        "wires": [
+            [
+                "a784170b1e8999ac"
+            ]
+        ]
+    },
+    {
+        "id": "a784170b1e8999ac",
+        "type": "function",
+        "z": "32db1e33cc6fca47",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e07fd9b605a3ce2",
+        "type": "function",
+        "z": "32db1e33cc6fca47",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 8,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "ab2348349b502ea2"
+            ],
+            [
+                "7ab8e267d6e15ed3"
+            ],
+            [
+                "2b8819dcbfc89fea"
+            ],
+            [
+                "3d0b10e698ca4895"
+            ],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "951a8fdef08fa58a",
+        "type": "template",
+        "z": "32db1e33cc6fca47",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 710,
+        "y": 300,
+        "wires": [
+            [
+                "a784170b1e8999ac"
+            ]
+        ]
+    },
+    {
+        "id": "3d0b10e698ca4895",
+        "type": "template",
+        "z": "32db1e33cc6fca47",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 710,
+        "y": 340,
+        "wires": [
+            [
+                "a784170b1e8999ac"
+            ]
+        ]
+    },
+    {
+        "id": "ddad8a7cc628c4bc",
+        "type": "template",
+        "z": "32db1e33cc6fca47",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 280,
+        "y": 240,
+        "wires": [
+            [
+                "061d776449250cd4",
+                "5e07fd9b605a3ce2"
+            ]
+        ]
+    },
+    {
+        "id": "50ac85f713bc4fba",
+        "type": "http in",
+        "z": "018c43299b296318",
+        "name": "请求获取产品信息",
+        "url": "/rest/v1/product-info/tree",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "3daab58fda318736"
+            ]
+        ]
+    },
+    {
+        "id": "b9735fc9242d20e7",
+        "type": "http response",
+        "z": "018c43299b296318",
+        "name": "返回获取到的产品信息",
+        "statusCode": "",
+        "headers": {},
+        "x": 1020,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2bbf4e78d0ed60e4",
+        "type": "http request",
+        "z": "018c43299b296318",
+        "name": "获取产品信息",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "http://10.10.1.33:8086/database-manager/v1/product-info/tree?msg.payload.userId=100",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 560,
+        "y": 260,
+        "wires": [
+            [
+                "98c8a647cd6423fc"
+            ]
+        ]
+    },
+    {
+        "id": "3daab58fda318736",
+        "type": "function",
+        "z": "018c43299b296318",
+        "name": "转换请求参数",
+        "func": "if (msg.payload.productId === \"2\") {\n    msg.payload.userId = msg.payload.productId\n} \n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "2bbf4e78d0ed60e4"
+            ]
+        ]
+    },
+    {
+        "id": "98c8a647cd6423fc",
+        "type": "function",
+        "z": "018c43299b296318",
+        "name": "处理获取到的产品信息",
+        "func": "let message = msg.payload.message;\nlet data = msg.payload.data;\n\nmsg.payload = message + \"一共：\" + data.length + \"条数据。\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 260,
+        "wires": [
+            [
+                "b9735fc9242d20e7"
+            ]
+        ]
+    },
+    {
+        "id": "4bd0c197e5d45453",
+        "type": "http in",
+        "z": "018c43299b296318",
+        "name": "请求日志信息",
+        "url": "/rest/v1/olog",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "10d399d26085a9bc"
+            ]
+        ]
+    },
+    {
+        "id": "be0c0bddd97b7a5b",
+        "type": "http response",
+        "z": "018c43299b296318",
+        "name": "返回获取到的日志信息",
+        "statusCode": "",
+        "headers": {},
+        "x": 860,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "10d399d26085a9bc",
+        "type": "function",
+        "z": "018c43299b296318",
+        "name": "获取日志信息SQL脚本",
+        "func": "let strOperation = msg.payload.operation;\n\nmsg.payload=[strOperation];\nmsg.topic=\"select * from tad_olog where operation = ?\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 400,
+        "wires": [
+            [
+                "c0e7e9a21945de35"
+            ]
+        ]
+    },
+    {
+        "id": "c0e7e9a21945de35",
+        "type": "mysql",
+        "z": "018c43299b296318",
+        "mydb": "71ba84bafeb49f62",
+        "name": "连接MySQL数据库",
+        "x": 610,
+        "y": 400,
+        "wires": [
+            [
+                "d96bf1cd2d6735e5",
+                "be0c0bddd97b7a5b"
+            ]
+        ]
+    },
+    {
+        "id": "d96bf1cd2d6735e5",
+        "type": "debug",
+        "z": "018c43299b296318",
+        "name": "测试输出",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "0d39a92c7b8043a3",
+        "type": "inject",
+        "z": "018c43299b296318",
+        "name": "测试按钮",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"operation\": \"select\"}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "10d399d26085a9bc"
+            ]
+        ]
+    },
+    {
+        "id": "5528a467d24f08c8",
+        "type": "http in",
+        "z": "018c43299b296318",
+        "name": "请求日志信息",
+        "url": "/rest/v1/olog2",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 560,
+        "wires": [
+            [
+                "4a5b711392aa0f4a"
+            ]
+        ]
+    },
+    {
+        "id": "4a5b711392aa0f4a",
+        "type": "template",
+        "z": "018c43299b296318",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<html>\n    <head>\n        <title>Hello World</title>\n        <style>\n            .clsDiv {\n                border: solid 1px red;\n                padding: 10px;\n            }\n        </style>\n    </head>\n    <body>\n        <div class='clsDiv'>\n        This is the payload: {{payload}} !        \n        </div>\n        <input value='hello world'>\n    </body>\n</html>\n",
+        "output": "str",
+        "x": 310,
+        "y": 560,
+        "wires": [
+            [
+                "88e38b2834301197"
+            ]
+        ]
+    },
+    {
+        "id": "88e38b2834301197",
+        "type": "http response",
+        "z": "018c43299b296318",
+        "name": "返回获取到的日志信息",
+        "statusCode": "",
+        "headers": {},
+        "x": 520,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "4b9ec9a84d08a74f",
+        "type": "inject",
+        "z": "018c43299b296318",
+        "name": "测试按钮",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 760,
+        "wires": [
+            [
+                "f9c1fe76a2c928f5"
+            ]
+        ]
+    },
+    {
+        "id": "f9c1fe76a2c928f5",
+        "type": "template",
+        "z": "018c43299b296318",
+        "name": "i = 1",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "1",
+        "output": "str",
+        "x": 290,
+        "y": 760,
+        "wires": [
+            [
+                "636ebe0218e28916"
+            ]
+        ]
+    },
+    {
+        "id": "636ebe0218e28916",
+        "type": "switch",
+        "z": "018c43299b296318",
+        "name": "i <= 4",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 450,
+        "y": 760,
+        "wires": [
+            [
+                "20d4ed3512014859"
+            ],
+            [
+                "91b3c971edd73669"
+            ]
+        ]
+    },
+    {
+        "id": "20d4ed3512014859",
+        "type": "template",
+        "z": "018c43299b296318",
+        "name": "输出 i",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{payload}}",
+        "output": "str",
+        "x": 610,
+        "y": 740,
+        "wires": [
+            [
+                "d81202630d097ea5",
+                "4ab7a49df8e05cae"
+            ]
+        ]
+    },
+    {
+        "id": "d81202630d097ea5",
+        "type": "debug",
+        "z": "018c43299b296318",
+        "name": "输出 i",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "4ab7a49df8e05cae",
+        "type": "function",
+        "z": "018c43299b296318",
+        "name": "i++",
+        "func": "msg.payload++;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 680,
+        "wires": [
+            [
+                "636ebe0218e28916"
+            ]
+        ]
+    },
+    {
+        "id": "91b3c971edd73669",
+        "type": "debug",
+        "z": "018c43299b296318",
+        "name": "结束",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "6f60b7a71e57d55f",
+        "type": "inject",
+        "z": "018c43299b296318",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 940,
+        "wires": [
+            [
+                "0faf1c9077ccb7e9"
+            ]
+        ]
+    },
+    {
+        "id": "0faf1c9077ccb7e9",
+        "type": "function",
+        "z": "018c43299b296318",
+        "name": "",
+        "func": "msg.payload = 100;\nnode.log(\"hello world\");\n\nlet newMsg = {}\nnewMsg.payload = 200;\n\nreturn [msg, newMsg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 940,
+        "wires": [
+            [
+                "fc30cf0bb27f7b73"
+            ],
+            [
+                "158961a873d91ad7"
+            ]
+        ]
+    },
+    {
+        "id": "fc30cf0bb27f7b73",
+        "type": "debug",
+        "z": "018c43299b296318",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "158961a873d91ad7",
+        "type": "debug",
+        "z": "018c43299b296318",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "9d21c4c62f7843e7",
+        "type": "mysql",
+        "z": "61fb8cd462613a38",
+        "mydb": "71ba84bafeb49f62",
+        "name": "",
+        "x": 730,
+        "y": 620,
+        "wires": [
+            [
+                "1b85e2a5e948b907"
+            ]
+        ]
+    },
+    {
+        "id": "341eae0fe6d938e3",
+        "type": "function",
+        "z": "61fb8cd462613a38",
+        "name": "获取日志信息SQL脚本",
+        "func": "let strOperation = msg.payload.operation;\n\nmsg.payload=[strOperation];\nmsg.topic=\"select * from tad_olog\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 620,
+        "wires": [
+            [
+                "9d21c4c62f7843e7"
+            ]
+        ]
+    },
+    {
+        "id": "1b85e2a5e948b907",
+        "type": "function",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 480,
+        "wires": [
+            [
+                "f9ae25154de456c8"
+            ]
+        ]
+    },
+    {
+        "id": "a153c1acbeecc8f3",
+        "type": "inject",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 620,
+        "wires": [
+            [
+                "341eae0fe6d938e3"
+            ]
+        ]
+    },
+    {
+        "id": "f9ae25154de456c8",
+        "type": "debug",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e2b5c46e83c6575d",
+        "type": "function",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 640,
+        "wires": [
+            [
+                "b54dc5c1d470dc92"
+            ]
+        ]
+    },
+    {
+        "id": "9ef157220688948f",
+        "type": "function",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 700,
+        "wires": [
+            [
+                "b54dc5c1d470dc92"
+            ]
+        ]
+    },
+    {
+        "id": "b54dc5c1d470dc92",
+        "type": "function",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 660,
+        "wires": [
+            [
+                "2509345ebd5bddb0"
+            ]
+        ]
+    },
+    {
+        "id": "2509345ebd5bddb0",
+        "type": "debug",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1450,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "140f1c29bc61da73",
+        "type": "inject",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "hello world, you are welcome.",
+        "payloadType": "str",
+        "x": 290,
+        "y": 820,
+        "wires": [
+            [
+                "6ef8b2c1b4e07f6d"
+            ]
+        ]
+    },
+    {
+        "id": "9eaea27ef361dba4",
+        "type": "debug",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "pos",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "6ef8b2c1b4e07f6d",
+        "type": "wordpos",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "x": 540,
+        "y": 820,
+        "wires": [
+            [
+                "9eaea27ef361dba4"
+            ]
+        ]
+    },
+    {
+        "id": "e1854a66da1d503d",
+        "type": "json",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 530,
+        "y": 920,
+        "wires": [
+            [
+                "cd55c98a9bf80b5a"
+            ]
+        ]
+    },
+    {
+        "id": "f28cf6109fcd1c97",
+        "type": "inject",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"name\": \"K\"}",
+        "payloadType": "json",
+        "x": 310,
+        "y": 920,
+        "wires": [
+            [
+                "e1854a66da1d503d"
+            ]
+        ]
+    },
+    {
+        "id": "cd55c98a9bf80b5a",
+        "type": "debug",
+        "z": "61fb8cd462613a38",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "d88dd470.0ac7b8",
+        "type": "inject",
+        "z": "460d1e5d310b092e",
+        "name": "make request",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 220,
+        "wires": [
+            [
+                "874a3d4e.9b666"
+            ]
+        ]
+    },
+    {
+        "id": "874a3d4e.9b666",
+        "type": "http request",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://nodered.org",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 580,
+        "y": 180,
+        "wires": [
+            [
+                "90243cc1.87edc"
+            ]
+        ]
+    },
+    {
+        "id": "7403c68f.21d7c8",
+        "type": "debug",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "90243cc1.87edc",
+        "type": "html",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "property": "",
+        "outproperty": "",
+        "tag": ".node-red-latest-version",
+        "ret": "text",
+        "as": "single",
+        "x": 790,
+        "y": 360,
+        "wires": [
+            [
+                "7403c68f.21d7c8"
+            ]
+        ]
+    },
+    {
+        "id": "2f95e587.302f6a",
+        "type": "change",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "headers",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\t    \"Accept\": \"application/json\",\t    \"Content-Type\": \"application/json\",\t    \"Authorization\": $flowContext('mailroute-api-key')\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 560,
+        "wires": [
+            [
+                "e403fab4.7cd128"
+            ]
+        ]
+    },
+    {
+        "id": "3ddbbae4.830b56",
+        "type": "inject",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "e7385cba.f3325"
+            ]
+        ]
+    },
+    {
+        "id": "e403fab4.7cd128",
+        "type": "http request",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 640,
+        "y": 640,
+        "wires": [
+            [
+                "7ec73a54.23a274"
+            ]
+        ]
+    },
+    {
+        "id": "7ec73a54.23a274",
+        "type": "json",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 730,
+        "y": 720,
+        "wires": [
+            [
+                "db8b73b7.5f5f4"
+            ]
+        ]
+    },
+    {
+        "id": "788ab243.258bbc",
+        "type": "switch",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "property": "payload.meta.next",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 880,
+        "wires": [
+            [
+                "9d358f5c.6e362"
+            ],
+            [
+                "dbc80fbf.2d03b"
+            ]
+        ]
+    },
+    {
+        "id": "dccc8e77.6f654",
+        "type": "debug",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "dbc80fbf.2d03b",
+        "type": "change",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "$replace(url, /(limit=)(.+)(&offset=)(.+)/, \"$1\" & $string(payload.meta.limit) & \"$3\" & $string(payload.meta.offset + payload.meta.limit))",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 960,
+        "wires": [
+            [
+                "6faae389.342f5c"
+            ]
+        ]
+    },
+    {
+        "id": "e7385cba.f3325",
+        "type": "change",
+        "z": "460d1e5d310b092e",
+        "name": "Set url, reset wblist",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "\"https://admin.mailroute.net/api/v1/\" & $flowContext('mailroute-api-path') & \"?limit=20&offset=0\"",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "wbrules",
+                "pt": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 500,
+        "wires": [
+            [
+                "2f95e587.302f6a"
+            ]
+        ]
+    },
+    {
+        "id": "6faae389.342f5c",
+        "type": "switch",
+        "z": "460d1e5d310b092e",
+        "name": "Offset > total?",
+        "property": "payload.meta.offset",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "payload.meta.total_count",
+                "vt": "msg"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 880,
+        "y": 1020,
+        "wires": [
+            [
+                "436c23a4.e12ffc"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "db8b73b7.5f5f4",
+        "type": "function",
+        "z": "460d1e5d310b092e",
+        "name": "Merge",
+        "func": "var wbrules = flow.get('wbrules') || []\n\nwbrules = wbrules.concat(msg.payload.objects)\n//Array.prototype.push.apply(wbrules, msg.payload.objects)\n\nflow.set('wbrules', wbrules)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 800,
+        "wires": [
+            [
+                "788ab243.258bbc"
+            ]
+        ]
+    },
+    {
+        "id": "9d358f5c.6e362",
+        "type": "change",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "wbrules",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "$globalContext('user-home-folder') & \"/Downloads/wblist.csv\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1120,
+        "y": 760,
+        "wires": [
+            [
+                "dccc8e77.6f654",
+                "90630247.fbb5a"
+            ]
+        ]
+    },
+    {
+        "id": "b4d88961.3abf88",
+        "type": "comment",
+        "z": "460d1e5d310b092e",
+        "name": "Mailroute Query API - Loop through all whitelist entries for an account",
+        "info": "Mailroute is a cloud service that pre-filters\nemail traffic. It has a number of settings including\na whitelist that allows you to force allow or \nblock for email from a specific domain or email\naddress.\n\nThis flow is an example of the API and an example\nof looping through an API that returns a limited\nset of records.\n\nThe flow returns an array of objects detailing\nall of the entries in the white-/black-list.\n\nIt also writes to a CSV file.\n\n## Flow Inputs\n\nNOTE that a separate flow is used to set three flow \nvariables containing information that you would not\nwant public. You will need to set these yourself:\n\n- (flow) mailroute-api-key - \n  The API key required for authorisation.\n  Obtain from the Mailroute Settings\n\n  Format is:\n  `ApiKey <apiUser>:<apiKey>`\n  \n- (flow) mailroute-api-path - \n  The sub-path that you want to use within\n  the API end-points.\n  See the [Mailroute API Documentation](https://support.mailroute.net/hc/en-us/sections/205312008-API)\n  for details.\n\n  To get the global whitelist entries:\n  `wblist/`\n  \n  To get the whitelist entries for a specific mail user:\n  `email_account/<userEmailAddress>/wblist/`\n\n- (global) user-home-folder - \n  Set to either the HOME or HOMEPATH environment\n  variable (dependent on command shell running\n  Node-RED)\n\n## Output Data Format\n\nOutput data from the API is JSON. But it is limited\nto 20 records at a time. This flow loops through\nto get all records and returns an array.\n\n- *email*: Domain or email address to block/allow.\n- *wb*: B = Block, A = Allow",
+        "x": 350,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d1b158de.0f8958",
+        "type": "file",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "filename": "",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 1400,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "90630247.fbb5a",
+        "type": "csv",
+        "z": "460d1e5d310b092e",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "domain,email,email_account,id,mail_addr,resource_url,wb",
+        "skip": 0,
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 1210,
+        "y": 880,
+        "wires": [
+            [
+                "d1b158de.0f8958"
+            ]
+        ]
+    },
+    {
+        "id": "436c23a4.e12ffc",
+        "type": "link out",
+        "z": "460d1e5d310b092e",
+        "name": "Loop-Out",
+        "links": [
+            "8fd170c.c8a909"
+        ],
+        "x": 535,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "8fd170c.c8a909",
+        "type": "link in",
+        "z": "460d1e5d310b092e",
+        "name": "Loop-In",
+        "links": [
+            "436c23a4.e12ffc"
+        ],
+        "x": 395,
+        "y": 640,
+        "wires": [
+            [
+                "2f95e587.302f6a"
+            ]
+        ]
+    },
+    {
+        "id": "3bc8e1d2.744abe",
+        "type": "switch",
+        "z": "56b08a446504d824",
+        "name": "Route ",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "temperature",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "humidity",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "pressure",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 610,
+        "y": 280,
+        "wires": [
+            [
+                "907bf3b8.def45"
+            ],
+            [
+                "fe425938.926838"
+            ],
+            [
+                "ec261304.52f73"
+            ]
+        ]
+    },
+    {
+        "id": "be3da36c.1c142",
+        "type": "inject",
+        "z": "56b08a446504d824",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "temperature",
+        "payload": "27",
+        "payloadType": "num",
+        "x": 420,
+        "y": 240,
+        "wires": [
+            [
+                "3bc8e1d2.744abe"
+            ]
+        ]
+    },
+    {
+        "id": "f271ceef.172b3",
+        "type": "inject",
+        "z": "56b08a446504d824",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "humidity",
+        "payload": "45",
+        "payloadType": "num",
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "3bc8e1d2.744abe"
+            ]
+        ]
+    },
+    {
+        "id": "907bf3b8.def45",
+        "type": "debug",
+        "z": "56b08a446504d824",
+        "name": "Temperature",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 790,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "fe425938.926838",
+        "type": "debug",
+        "z": "56b08a446504d824",
+        "name": "Humidity",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 780,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ec261304.52f73",
+        "type": "debug",
+        "z": "56b08a446504d824",
+        "name": "Pressure",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 780,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "fca957dd.9d8078",
+        "type": "inject",
+        "z": "56b08a446504d824",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "pressure",
+        "payload": "1001",
+        "payloadType": "num",
+        "x": 410,
+        "y": 320,
+        "wires": [
+            [
+                "3bc8e1d2.744abe"
+            ]
+        ]
+    },
+    {
+        "id": "2e071499.d1f8ec",
+        "type": "inject",
+        "z": "ebf440d3c5f2d319",
+        "name": "WordCount Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "5ba772eb.a4588c"
+            ]
+        ]
+    },
+    {
+        "id": "da2fc73d.25d038",
+        "type": "function",
+        "z": "ebf440d3c5f2d319",
+        "name": "Map",
+        "func": "var input = msg.payload.toLowerCase()\n                       .replace( /\\.$/, \"\")\n                       .split(/ |, /);\n// Map\nvar key_value = [];\nfor (var i=0; i<input.length; i++)\n{\n    var key = input[i];\n    if (key in key_value)\n    {\n        key_value[key]++;\n    } else {\n        key_value[key] = 1;\n    }\n}\n\n// Shuffle\nvar key1_value = [];\nvar key2_value = [];\nfor (var key in key_value)\n{\n    if ('a'<=key[0] && key[0]<='m')\n    {\n        key1_value.push([key, key_value[key]]);\n    } else {\n        key2_value.push([key, key_value[key]]);\n    }\n}\n\nmsg.payload = key1_value;\nvar msg2 = {};\nmsg2.payload = key2_value;\nreturn [msg, msg2];",
+        "outputs": "2",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 360,
+        "wires": [
+            [
+                "a6db13a3.5924f"
+            ],
+            [
+                "d8efce74.27103"
+            ]
+        ]
+    },
+    {
+        "id": "a6db13a3.5924f",
+        "type": "function",
+        "z": "ebf440d3c5f2d319",
+        "name": "Reduce",
+        "func": "context.global.n1--;\n\ncontext.global.data1[context.global.n1] = msg.payload;\n\nif (context.global.n1 === 0)\n{  \n    var tmp = [];\n    for (var i=0; i<context.global.data1.length; i++)\n    {\n        var input = context.global.data1[i];\n        for (var j=0; j<input.length; j++)\n        {\n            var key = input[j][0];\n            var value = input[j][1];\n            if (key in tmp)\n            {\n                tmp[key] += value;\n            } else {\n                tmp[key] = value;\n            }\n        }\n    }\n    \n    var output = [];\n    for (var key in tmp)\n    {\n        output.push([key, tmp[key]]);\n    }\n    msg.payload = output;\n\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 858,
+        "y": 375,
+        "wires": [
+            [
+                "d0202e3f.2fdfd"
+            ]
+        ]
+    },
+    {
+        "id": "d0202e3f.2fdfd",
+        "type": "debug",
+        "z": "ebf440d3c5f2d319",
+        "name": "Output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 998,
+        "y": 375,
+        "wires": []
+    },
+    {
+        "id": "5ba772eb.a4588c",
+        "type": "function",
+        "z": "ebf440d3c5f2d319",
+        "name": "Map=3",
+        "func": "var map = 3;\n\ncontext.global.n1 = map;\ncontext.global.data1 = new Array(map);\n\ncontext.global.n2 = map;\ncontext.global.data2 = new Array(map);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 267,
+        "y": 300.99995613098145,
+        "wires": [
+            [
+                "45046c79.bafb94",
+                "ffbf130e.0040f",
+                "1e9ff8b0.e16007"
+            ]
+        ]
+    },
+    {
+        "id": "45046c79.bafb94",
+        "type": "template",
+        "z": "ebf440d3c5f2d319",
+        "name": "This is a pen.",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "This is a pen.",
+        "x": 506,
+        "y": 360,
+        "wires": [
+            [
+                "da2fc73d.25d038"
+            ]
+        ]
+    },
+    {
+        "id": "d8efce74.27103",
+        "type": "function",
+        "z": "ebf440d3c5f2d319",
+        "name": "Reduce",
+        "func": "context.global.n2--;\n\ncontext.global.data2[context.global.n2] = msg.payload;\n\nif (context.global.n2 === 0)\n{   \n    var tmp = [];\n    for (var i=0; i<context.global.data2.length; i++)\n    {\n        var input = context.global.data2[i];\n        for (var j=0; j<input.length; j++)\n        {\n            var key = input[j][0];\n            var value = input[j][1];\n            if (key in tmp)\n            {\n                tmp[key] += value;\n            } else {\n                tmp[key] = value;\n            }\n        }\n    }\n    \n    var output = [];\n    for (var key in tmp)\n    {\n        output.push([key, tmp[key]]);\n    }\n    msg.payload = output;\n\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 427,
+        "wires": [
+            [
+                "a3ae2ac4.5c51d8"
+            ]
+        ]
+    },
+    {
+        "id": "a3ae2ac4.5c51d8",
+        "type": "debug",
+        "z": "ebf440d3c5f2d319",
+        "name": "Output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 999,
+        "y": 427,
+        "wires": []
+    },
+    {
+        "id": "24723eda.db8dc2",
+        "type": "function",
+        "z": "ebf440d3c5f2d319",
+        "name": "Map",
+        "func": "var input = msg.payload.toLowerCase()\n                       .replace( /\\.$/, \"\")\n                       .split(/ |, /);\n// Map\nvar key_value = [];\nfor (var i=0; i<input.length; i++)\n{\n    var key = input[i];\n    if (key in key_value)\n    {\n        key_value[key]++;\n    } else {\n        key_value[key] = 1;\n    }\n}\n\n// Shuffle\nvar key1_value = [];\nvar key2_value = [];\nfor (var key in key_value)\n{\n    if ('a'<=key[0] && key[0]<='m')\n    {\n        key1_value.push([key, key_value[key]]);\n    } else {\n        key2_value.push([key, key_value[key]]);\n    }\n}\n\nmsg.payload = key1_value;\nvar msg2 = {};\nmsg2.payload = key2_value;\nreturn [msg, msg2];",
+        "outputs": "2",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 651,
+        "y": 406,
+        "wires": [
+            [
+                "a6db13a3.5924f"
+            ],
+            [
+                "d8efce74.27103"
+            ]
+        ]
+    },
+    {
+        "id": "2047f8a.fdfb808",
+        "type": "function",
+        "z": "ebf440d3c5f2d319",
+        "name": "Map",
+        "func": "var input = msg.payload.toLowerCase()\n                       .replace( /\\.$/, \"\")\n                       .split(/ |, /);\n// Map\nvar key_value = [];\nfor (var i=0; i<input.length; i++)\n{\n    var key = input[i];\n    if (key in key_value)\n    {\n        key_value[key]++;\n    } else {\n        key_value[key] = 1;\n    }\n}\n\n// Shuffle\nvar key1_value = [];\nvar key2_value = [];\nfor (var key in key_value)\n{\n    if ('a'<=key[0] && key[0]<='m')\n    {\n        key1_value.push([key, key_value[key]]);\n    } else {\n        key2_value.push([key, key_value[key]]);\n    }\n}\n\nmsg.payload = key1_value;\nvar msg2 = {};\nmsg2.payload = key2_value;\nreturn [msg, msg2];",
+        "outputs": "2",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 652,
+        "y": 452,
+        "wires": [
+            [
+                "a6db13a3.5924f"
+            ],
+            [
+                "d8efce74.27103"
+            ]
+        ]
+    },
+    {
+        "id": "ffbf130e.0040f",
+        "type": "template",
+        "z": "ebf440d3c5f2d319",
+        "name": "Give me a pen.",
+        "field": "payload",
+        "format": "html",
+        "template": "Give me a pen.",
+        "x": 501,
+        "y": 406,
+        "wires": [
+            [
+                "24723eda.db8dc2"
+            ]
+        ]
+    },
+    {
+        "id": "1e9ff8b0.e16007",
+        "type": "template",
+        "z": "ebf440d3c5f2d319",
+        "name": "This pen is small.",
+        "field": "payload",
+        "format": "html",
+        "template": "This pen is small.",
+        "x": 494,
+        "y": 452,
+        "wires": [
+            [
+                "2047f8a.fdfb808"
+            ]
+        ]
+    },
+    {
+        "id": "e8ae0aef.1751f8",
+        "type": "comment",
+        "z": "ebf440d3c5f2d319",
+        "name": "MapReduce pattern",
+        "info": "",
+        "x": 267,
+        "y": 175.99995613098145,
+        "wires": []
+    },
+    {
+        "id": "97307850.68cf88",
+        "type": "comment",
+        "z": "ebf440d3c5f2d319",
+        "name": "Set the map count ↑",
+        "info": "",
+        "x": 227.91319274902344,
+        "y": 347.4258575439453,
+        "wires": []
+    },
+    {
+        "id": "56a35efb.a95ca",
+        "type": "comment",
+        "z": "ebf440d3c5f2d319",
+        "name": "↓ input data to be processed",
+        "info": "",
+        "x": 574.079833984375,
+        "y": 318.425820350647,
+        "wires": []
+    },
+    {
+        "id": "f5a268d1.0a5d98",
+        "type": "comment",
+        "z": "ebf440d3c5f2d319",
+        "name": "↑ seperates the words based on the first letter, a-m is sent to the top function, n-z is sent to the lower",
+        "info": "",
+        "x": 907.4131469726562,
+        "y": 491.8516845703125,
+        "wires": []
+    },
+    {
+        "id": "ef71c34d.108e4",
+        "type": "comment",
+        "z": "ebf440d3c5f2d319",
+        "name": "↓ reduce the arrays and count the total value",
+        "info": "",
+        "x": 968.579833984375,
+        "y": 333.5184326171875,
+        "wires": []
+    },
+    {
+        "id": "c21a5b5.f3de5a8",
+        "type": "comment",
+        "z": "ebf440d3c5f2d319",
+        "name": "After all inputs have returned,",
+        "info": "",
+        "x": 919.5,
+        "y": 294.9166717529297,
+        "wires": []
+    },
+    {
+        "id": "95558416809454eb",
+        "type": "http in",
+        "z": "9e9e641d2adb78ee",
+        "name": "",
+        "url": "/rest/v1/sql",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 360,
+        "y": 500,
+        "wires": [
+            [
+                "937642a9103d675b"
+            ]
+        ]
+    },
+    {
+        "id": "7ffaf60721eeb6a0",
+        "type": "http response",
+        "z": "9e9e641d2adb78ee",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 890,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "937642a9103d675b",
+        "type": "subflow:fa93550718b3cad8",
+        "z": "9e9e641d2adb78ee",
+        "name": "",
+        "x": 540,
+        "y": 500,
+        "wires": [
+            [
+                "94832c3cd191085b"
+            ]
+        ]
+    },
+    {
+        "id": "94832c3cd191085b",
+        "type": "subflow:32db1e33cc6fca47",
+        "z": "9e9e641d2adb78ee",
+        "name": "",
+        "x": 720,
+        "y": 500,
+        "wires": [
+            [
+                "7ffaf60721eeb6a0"
+            ]
+        ]
+    },
+    {
+        "id": "334c7bee6942bfdd",
+        "type": "function",
+        "z": "1e40fc1207db66c8",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 8,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 280,
+        "wires": [
+            [
+                "d4021cf6ff6105c9"
+            ],
+            [
+                "9ff50816bcc36ae3"
+            ],
+            [
+                "4812c2a6fdd60b9d"
+            ],
+            [
+                "e5e7b510de6a6d25"
+            ],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d4021cf6ff6105c9",
+        "type": "template",
+        "z": "1e40fc1207db66c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 830,
+        "y": 300,
+        "wires": [
+            [
+                "4083b8fd689008df"
+            ]
+        ]
+    },
+    {
+        "id": "9ff50816bcc36ae3",
+        "type": "template",
+        "z": "1e40fc1207db66c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 830,
+        "y": 340,
+        "wires": [
+            [
+                "4083b8fd689008df"
+            ]
+        ]
+    },
+    {
+        "id": "4812c2a6fdd60b9d",
+        "type": "template",
+        "z": "1e40fc1207db66c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 830,
+        "y": 380,
+        "wires": [
+            [
+                "4083b8fd689008df"
+            ]
+        ]
+    },
+    {
+        "id": "4083b8fd689008df",
+        "type": "function",
+        "z": "1e40fc1207db66c8",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d310df9251585098",
+        "type": "function",
+        "z": "1e40fc1207db66c8",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 8,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 460,
+        "wires": [
+            [
+                "d4021cf6ff6105c9"
+            ],
+            [
+                "9ff50816bcc36ae3"
+            ],
+            [
+                "4812c2a6fdd60b9d"
+            ],
+            [
+                "53be2e209894cb47"
+            ],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e5e7b510de6a6d25",
+        "type": "template",
+        "z": "1e40fc1207db66c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 830,
+        "y": 420,
+        "wires": [
+            [
+                "4083b8fd689008df"
+            ]
+        ]
+    },
+    {
+        "id": "53be2e209894cb47",
+        "type": "template",
+        "z": "1e40fc1207db66c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 830,
+        "y": 460,
+        "wires": [
+            [
+                "4083b8fd689008df"
+            ]
+        ]
+    },
+    {
+        "id": "02d13fadc5456afe",
+        "type": "mysql",
+        "z": "1e40fc1207db66c8",
+        "mydb": "71ba84bafeb49f62",
+        "name": "",
+        "x": 870,
+        "y": 120,
+        "wires": [
+            [
+                "b1284b355f9310ce",
+                "5ab912212c98821a"
+            ]
+        ]
+    },
+    {
+        "id": "1ef264acb1d4be07",
+        "type": "function",
+        "z": "1e40fc1207db66c8",
+        "name": "获取日志信息SQL脚本",
+        "func": "let strOperation = msg.payload.operation;\n\nmsg.payload=[strOperation];\nmsg.topic=\"select * from tad_olog\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 120,
+        "wires": [
+            [
+                "02d13fadc5456afe"
+            ]
+        ]
+    },
+    {
+        "id": "69b41b43070b2850",
+        "type": "inject",
+        "z": "1e40fc1207db66c8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 490,
+        "y": 120,
+        "wires": [
+            [
+                "1ef264acb1d4be07"
+            ]
+        ]
+    },
+    {
+        "id": "b1284b355f9310ce",
+        "type": "debug",
+        "z": "1e40fc1207db66c8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "5ab912212c98821a",
+        "type": "kingworld",
+        "z": "1e40fc1207db66c8",
+        "version": "0.06",
+        "name": "KingWorld",
+        "outputs": 3,
+        "myOutputs": "3",
+        "fields": [],
+        "records": [],
+        "x": 1110,
+        "y": 120,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0b82acd6208cf766",
+        "type": "yisDataObjectEditor",
+        "z": "9575380d132f6e77",
+        "version": "0.01",
+        "name": "",
+        "x": 880,
+        "y": 480,
+        "wires": [
+            [
+                "67b0b6fb3d0f2a9d",
+                "f276279bec4744ba"
+            ]
+        ]
+    },
+    {
+        "id": "0cf850feea73bd13",
+        "type": "mysql",
+        "z": "9575380d132f6e77",
+        "mydb": "71ba84bafeb49f62",
+        "name": "",
+        "x": 690,
+        "y": 480,
+        "wires": [
+            [
+                "0b82acd6208cf766"
+            ]
+        ]
+    },
+    {
+        "id": "384b3400426aacc3",
+        "type": "function",
+        "z": "9575380d132f6e77",
+        "name": "获取日志信息SQL脚本",
+        "func": "let strOperation = msg.payload.operation;\n\nmsg.payload=[strOperation];\nmsg.topic=\"select * from tad_olog\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 480,
+        "wires": [
+            [
+                "0cf850feea73bd13"
+            ]
+        ]
+    },
+    {
+        "id": "a987c84e8a248338",
+        "type": "inject",
+        "z": "9575380d132f6e77",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 540,
+        "wires": [
+            [
+                "384b3400426aacc3"
+            ]
+        ]
+    },
+    {
+        "id": "fb747dc8e45fce58",
+        "type": "http in",
+        "z": "9575380d132f6e77",
+        "name": "写入KEY@MySQL",
+        "url": "/rest/v1/write_key_mysql",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "d8c725ee49ee26aa"
+            ]
+        ]
+    },
+    {
+        "id": "a2c4c58c92407548",
+        "type": "http response",
+        "z": "9575380d132f6e77",
+        "name": "返回结果",
+        "statusCode": "",
+        "headers": {},
+        "x": 880,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d8c725ee49ee26aa",
+        "type": "function",
+        "z": "9575380d132f6e77",
+        "name": "SQL脚本",
+        "func": "let params = msg.payload\n\nmsg.topic = \"insert into dvb_nodered_yis_data(app, key_name, key_value) values('\" + params.app + \"', '\" + params.keyName + \"', '\" + params.keyValue + \"')\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "2d2b34b9591130d6"
+            ]
+        ]
+    },
+    {
+        "id": "2d2b34b9591130d6",
+        "type": "mysql",
+        "z": "9575380d132f6e77",
+        "mydb": "71ba84bafeb49f62",
+        "name": "连接MySQL数据库",
+        "x": 670,
+        "y": 80,
+        "wires": [
+            [
+                "1879a895b0766cde",
+                "a2c4c58c92407548"
+            ]
+        ]
+    },
+    {
+        "id": "1879a895b0766cde",
+        "type": "debug",
+        "z": "9575380d132f6e77",
+        "name": "测试输出",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "67b0b6fb3d0f2a9d",
+        "type": "debug",
+        "z": "9575380d132f6e77",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "402b17c757edb7ac",
+        "type": "http in",
+        "z": "9575380d132f6e77",
+        "name": "读取KEY@MySQL",
+        "url": "/rest/v1/read_key_mysql",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "ea2ba0e8b01b7a1b"
+            ]
+        ]
+    },
+    {
+        "id": "d6aeec1ced0a9956",
+        "type": "http response",
+        "z": "9575380d132f6e77",
+        "name": "返回结果",
+        "statusCode": "",
+        "headers": {},
+        "x": 880,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ea2ba0e8b01b7a1b",
+        "type": "function",
+        "z": "9575380d132f6e77",
+        "name": "SQL脚本",
+        "func": "let params = msg.payload\n\nmsg.topic = \"select * from dvb_nodered_yis_data where app = '\" + params.app + \"' and key_name = '\" + params.keyName + \"' order by uuid desc\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "e4fd5d2bb1959532"
+            ]
+        ]
+    },
+    {
+        "id": "e4fd5d2bb1959532",
+        "type": "mysql",
+        "z": "9575380d132f6e77",
+        "mydb": "71ba84bafeb49f62",
+        "name": "连接MySQL数据库",
+        "x": 670,
+        "y": 260,
+        "wires": [
+            [
+                "b63f520a28b20783",
+                "d6aeec1ced0a9956"
+            ]
+        ]
+    },
+    {
+        "id": "b63f520a28b20783",
+        "type": "debug",
+        "z": "9575380d132f6e77",
+        "name": "测试输出",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8f1c1d0168a52b3b",
+        "type": "http in",
+        "z": "9575380d132f6e77",
+        "name": "获取数据集_TEST@MySQL",
+        "url": "/rest/v1/dataset/get_test",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 480,
+        "wires": [
+            [
+                "384b3400426aacc3"
+            ]
+        ]
+    },
+    {
+        "id": "f276279bec4744ba",
+        "type": "http response",
+        "z": "9575380d132f6e77",
+        "name": "返回结果",
+        "statusCode": "",
+        "headers": {},
+        "x": 1100,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "7c92dac3e8bef75f",
+        "type": "yisDataObjectEditor",
+        "z": "9575380d132f6e77",
+        "version": "0.01",
+        "name": "获取数据集定义",
+        "x": 460,
+        "y": 700,
+        "wires": [
+            [
+                "4646d155e20e148b"
+            ]
+        ]
+    },
+    {
+        "id": "4646d155e20e148b",
+        "type": "mysql",
+        "z": "9575380d132f6e77",
+        "mydb": "71ba84bafeb49f62",
+        "name": "",
+        "x": 690,
+        "y": 700,
+        "wires": [
+            [
+                "7cd9cd22820fe6fe"
+            ]
+        ]
+    },
+    {
+        "id": "1f493006cc181b66",
+        "type": "inject",
+        "z": "9575380d132f6e77",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 760,
+        "wires": [
+            [
+                "7c92dac3e8bef75f"
+            ]
+        ]
+    },
+    {
+        "id": "fc65a99b05045a01",
+        "type": "http in",
+        "z": "9575380d132f6e77",
+        "name": "获取数据集@MySQL",
+        "url": "/rest/v1/dataset/get_test",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 700,
+        "wires": [
+            [
+                "7c92dac3e8bef75f"
+            ]
+        ]
+    },
+    {
+        "id": "7cd9cd22820fe6fe",
+        "type": "http response",
+        "z": "9575380d132f6e77",
+        "name": "返回结果",
+        "statusCode": "",
+        "headers": {},
+        "x": 860,
+        "y": 700,
+        "wires": []
+    }
+]
